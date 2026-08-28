@@ -11,7 +11,7 @@
 3. [Closures — The Deep Dive](#3-closures--the-deep-dive)
 4. [The `this` Keyword — All Four Rules](#4-the-this-keyword--all-four-rules)
 5. [Arrow Functions and Lexical `this`](#5-arrow-functions-and-lexical-this)
-6. [IIFE — Immediately Invoked Function Expressions](#6-iife--immediately-invoked-function-expressions)
+6. [IIFE (Immediately Invoked Function Expression)](#6-iife-immediately-invoked-function-expression)
 7. [Higher-Order Functions](#7-higher-order-functions)
 8. [Exercises](#8-exercises)
 9. [Milestone Project](#9-milestone-project)
