@@ -1,4 +1,4 @@
-﻿# Week 1 — JS You MUST Know Before React
+# Week 1 — JS You MUST Know Before React
 
 # The Complete Deep-Dive Lesson
 
@@ -74,7 +74,7 @@ Every single syntax in that file is covered this week.
   out once at the top. React uses this for props, API responses, and hook return values.
 
   ```js
-  const user = { name: "Chethan", age: 22, city: "Bangalore" };
+  const user = { name: "Alex", age: 22, city: "Bangalore" };
 
   // Without destructuring (repetitive):
   const name = user.name;
@@ -82,7 +82,7 @@ Every single syntax in that file is covered this week.
 
   // With destructuring (clean):
   const { name, age } = user;
-  console.log(name); // "Chethan"
+  console.log(name); // "Alex"
   console.log(age);  // 22
   ```
 
@@ -93,7 +93,7 @@ Every single syntax in that file is covered this week.
 
   ```js
   const { name: userName, age: userAge } = user;
-  console.log(userName); // "Chethan"
+  console.log(userName); // "Alex"
   // `name` is NOT declared — only `userName` is
   ```
 
@@ -102,7 +102,7 @@ Every single syntax in that file is covered this week.
   defaults work.
 
   ```js
-  const { name, role = "student" } = { name: "Chethan" };
+  const { name, role = "student" } = { name: "Alex" };
   console.log(role); // "student" — because role was undefined in the object
   ```
 
@@ -114,12 +114,12 @@ Every single syntax in that file is covered this week.
   ```js
   const response = {
     status: 200,
-    data: { user: { id: 42, name: "Chethan" } }
+    data: { user: { id: 42, name: "Alex" } }
   };
 
   const { data: { user: { id, name } } } = response;
   console.log(id);   // 42
-  console.log(name); // "Chethan"
+  console.log(name); // "Alex"
   ```
 
 ### Array Destructuring
@@ -189,9 +189,9 @@ Both use the same `...` syntax but do opposite things depending on context.
 
   ```js
   // Merging objects (critical for React state updates):
-  const user = { name: "Chethan", age: 22, city: "Bangalore" };
+  const user = { name: "Alex", age: 22, city: "Bangalore" };
   const updated = { ...user, age: 23 }; // spread all, then override age
-  console.log(updated); // { name: "Chethan", age: 23, city: "Bangalore" }
+  console.log(updated); // { name: "Alex", age: 23, city: "Bangalore" }
   // `user` is unchanged — this is immutability
   ```
 
@@ -311,7 +311,7 @@ Both use the same `...` syntax but do opposite things depending on context.
   This is used constantly in JSX `className`, API URL construction, and log messages.
 
   ```js
-  const name = "Chethan";
+  const name = "Alex";
   const score = 95;
 
   // Old way (error-prone concatenation):
@@ -615,7 +615,7 @@ must understand Promises and async/await to use `useEffect` correctly.
   Promise synchronously — you must wait.
 
   ```js
-  const promise = fetch('https://api.github.com/users/Chethanbhat04');
+  const promise = fetch('https://api.github.com/users/alexdev');
   // promise is immediately returned — but the data is NOT here yet
   // It is "pending" until the network request completes
   ```
@@ -634,7 +634,7 @@ must understand Promises and async/await to use `useEffect` correctly.
     return data; // the resolved value — not a Promise
   }
 
-  getUser("Chethanbhat04").then(user => console.log(user.name));
+  getUser("alexdev").then(user => console.log(user.name));
   ```
 
 - **Always wrap `await` in try/catch for error handling** — If the Promise rejects
@@ -682,11 +682,11 @@ must understand Promises and async/await to use `useEffect` correctly.
 1. **Destructuring drill** — Given this object, destructure `name`, `age`, and the
    `city` from the nested `address`. Provide a default for `role` as `"user"`.
    ```js
-   const profile = { name: "Chethan", age: 22, address: { city: "Bangalore" } };
+   const profile = { name: "Alex", age: 22, address: { city: "Bangalore" } };
    ```
 
 2. **Spread immutability** — Create a React-style state update: given `state =
-   { user: "Chethan", theme: "dark", lang: "en" }`, produce a new object with
+   { user: "Alex", theme: "dark", lang: "en" }`, produce a new object with
    `theme` changed to `"light"` without mutating the original.
 
 3. **Array methods chain** — Given an array of products with `{ name, price, inStock }`,

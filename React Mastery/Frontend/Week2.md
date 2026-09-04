@@ -1,4 +1,4 @@
-﻿# Week 2 — React Core: JSX, Components & Props
+# Week 2 — React Core: JSX, Components & Props
 
 # The Complete Deep-Dive Lesson
 
@@ -208,7 +208,7 @@ to child — never the other way around.
 
   ```jsx
   // Parent passing props:
-  <UserCard name="Chethan" age={22} isAdmin={true} />
+  <UserCard name="Alex" age={22} isAdmin={true} />
 
   // Child receiving props (option 1 — full object):
   function UserCard(props) {
@@ -303,7 +303,7 @@ to child — never the other way around.
     return (
       <Card title="User Profile">
         <img src="/avatar.png" alt="avatar" />
-        <p>Name: Chethan</p>
+        <p>Name: Alex</p>
         <button>Edit Profile</button>
       </Card>
     );

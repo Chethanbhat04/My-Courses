@@ -1,4 +1,4 @@
-﻿# Week 7 — Global State: Context API & Zustand
+# Week 7 — Global State: Context API & Zustand
 
 # The Complete Deep-Dive Lesson
 
@@ -33,7 +33,7 @@
   ```jsx
   // App holds the user and needs to pass it all the way to Avatar
   function App() {
-    const [user, setUser] = useState({ name: "Chethan", avatar: "/pic.jpg" });
+    const [user, setUser] = useState({ name: "Alex", avatar: "/pic.jpg" });
     return <Page user={user} />;          // Page doesn't use user
   }
 

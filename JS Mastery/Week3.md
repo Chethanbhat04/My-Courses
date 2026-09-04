@@ -53,9 +53,9 @@ function greet(name) {
 
   ```js
   const user = {
-    name: "Chethan",
+    name: "Alex",
     greet: function () {
-      console.log(this.name); // "Chethan" — this refers to user
+      console.log(this.name); // "Alex" — this refers to user
     }
   };
   user.greet();
@@ -93,10 +93,10 @@ function greet(name) {
     this.age = age;
   }
 
-  const user1 = new Person("Chethan", 21);
+  const user1 = new Person("Alex", 21);
   const user2 = new Person("Alice", 25);
 
-  console.log(user1.name); // "Chethan"
+  console.log(user1.name); // "Alex"
   console.log(user2.name); // "Alice"
   ```
 
@@ -177,7 +177,7 @@ const greet = (name) => `Hello, ${name}!`;
 
   ```js
   const Person = (name) => { this.name = name; };
-  const p = new Person("Chethan"); // ❌ TypeError: Person is not a constructor
+  const p = new Person("Alex"); // ❌ TypeError: Person is not a constructor
   ```
 
 ### Comparison Table

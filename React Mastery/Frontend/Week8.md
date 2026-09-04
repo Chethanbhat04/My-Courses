@@ -1,4 +1,4 @@
-﻿# Week 8 — Performance, Patterns & Production Readiness
+# Week 8 — Performance, Patterns & Production Readiness
 
 # The Complete Deep-Dive Lesson
 
@@ -41,7 +41,7 @@ Before optimizing, you need to understand exactly when React re-renders.
     return (
       <>
         <button onClick={() => setCount(c => c + 1)}>Increment</button>
-        <ExpensiveChild name="Chethan" /> {/* Re-renders on EVERY count change */}
+        <ExpensiveChild name="Alex" /> {/* Re-renders on EVERY count change */}
       </>
     );
   }

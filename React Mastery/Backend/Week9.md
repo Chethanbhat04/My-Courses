@@ -1,4 +1,4 @@
-﻿# Week 9 — Node.js & the Runtime Model
+# Week 9 — Node.js & the Runtime Model
 
 # The Complete Deep-Dive Lesson
 
@@ -209,7 +209,7 @@ These are Node's built-in modules — no npm install needed.
   console.log(os.arch());        // 'x64', 'arm64'
   console.log(os.cpus().length); // number of CPU cores
   console.log(os.freemem());     // free memory in bytes
-  console.log(os.homedir());     // '/home/chethan' or 'C:\Users\Chethan'
+  console.log(os.homedir());     // '/home/alex' or 'C:\Users\Alex'
   ```
 
 ---
@@ -281,7 +281,7 @@ Understanding Node's raw `http` module shows you what Express wraps.
       res.end(JSON.stringify({ message: 'Hello from Node!' }));
 
     } else if (req.url === '/users' && req.method === 'GET') {
-      const users = [{ id: 1, name: 'Chethan' }];
+      const users = [{ id: 1, name: 'Alex' }];
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify(users));
 

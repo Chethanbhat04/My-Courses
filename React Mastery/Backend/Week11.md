@@ -1,4 +1,4 @@
-﻿# Week 11 — Databases: MongoDB + Mongoose
+# Week 11 — Databases: MongoDB + Mongoose
 
 # The Complete Deep-Dive Lesson
 
@@ -36,8 +36,8 @@
   SQL (relational):              MongoDB (document):
   ┌─────────────────────────┐    {
   │ users table             │      _id: ObjectId("..."),
-  │ id | name | email       │      name: "Chethan",
-  │ 1  | Chethan | c@x.com  │      email: "c@x.com",
+  │ id | name | email       │      name: "Alex",
+  │ 1  | Alex | c@x.com     │      email: "c@x.com",
   └─────────────────────────┘      role: "admin",
                                    createdAt: ISODate("2024-01-15")
                                  }
@@ -211,11 +211,11 @@ Mongoose adds structure to MongoDB through schemas.
 
   ```js
   // Method 1: instantiate + save
-  const user = new User({ name: "Chethan", email: "c@x.com", password: "hashed123" });
+  const user = new User({ name: "Alex", email: "c@x.com", password: "hashed123" });
   await user.save(); // validates + writes to MongoDB
 
   // Method 2: Model.create() shorthand (preferred)
-  const user = await User.create({ name: "Chethan", email: "c@x.com", password: "hashed123" });
+  const user = await User.create({ name: "Alex", email: "c@x.com", password: "hashed123" });
   console.log(user._id); // the auto-generated ObjectId
   ```
 
@@ -369,7 +369,7 @@ MongoDB offers two ways to model related data. Choosing the right one matters fo
   // Reading — use populate() to join the referenced document:
   const post = await Post.findById(id)
     .populate('author', 'name email avatar'); // fetch only these fields from User
-  console.log(post.author.name); // "Chethan" — fully populated
+  console.log(post.author.name); // "Alex" — fully populated
 
   // Without populate:
   console.log(post.author); // ObjectId("507f...") — just the ID
@@ -419,7 +419,7 @@ MongoDB offers two ways to model related data. Choosing the right one matters fo
   userSchema.set('toJSON', { virtuals: true });
 
   const user = await User.findById(id);
-  console.log(user.fullName); // "Chethan Bhat" — not stored, computed on the fly
+  console.log(user.fullName); // "Alex Turner" — not stored, computed on the fly
   ```
 
 ---

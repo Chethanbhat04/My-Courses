@@ -1,4 +1,4 @@
-﻿# Week 10 — Express.js: REST APIs from Scratch
+# Week 10 — Express.js: REST APIs from Scratch
 
 # The Complete Deep-Dive Lesson
 
@@ -235,7 +235,7 @@ authentication, logging, rate limiting, body parsing, and error handling.
   This is the primary method for REST APIs. It automatically serializes the data.
 
   ```js
-  res.json({ name: "Chethan", age: 22 });             // 200 OK with JSON
+  res.json({ name: "Alex", age: 22 });             // 200 OK with JSON
   res.status(201).json({ id: 1, message: "Created" }); // 201 Created with JSON
   res.status(404).json({ error: "User not found" });   // 404 with error JSON
   ```
@@ -335,7 +335,7 @@ app.use(cors());
 
 // In-memory data store (replace with MongoDB in Week 11)
 let users = [
-  { id: 1, name: "Chethan", email: "chethan@example.com", role: "admin" },
+  { id: 1, name: "Alex", email: "alex@example.com", role: "admin" },
   { id: 2, name: "Ravi",    email: "ravi@example.com",    role: "user"  },
 ];
 let nextId = 3;

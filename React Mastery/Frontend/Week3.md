@@ -1,4 +1,4 @@
-﻿# Week 3 — State, Events & Controlled Components
+# Week 3 — State, Events & Controlled Components
 
 # The Complete Deep-Dive Lesson
 
@@ -76,10 +76,10 @@
   React ignores the argument and returns the current state value.
 
   ```jsx
-  const [name, setName] = useState("Chethan");
+  const [name, setName] = useState("Alex");
   // React essentially does:
-  // First render:  name = "Chethan"
-  // After setName("Ravi"): name = "Ravi" (initial "Chethan" is gone)
+  // First render:  name = "Alex"
+  // After setName("Ravi"): name = "Ravi" (initial "Alex" is gone)
   ```
 
 - **Calling the setter replaces the state value — it does NOT merge** — This is
@@ -87,7 +87,7 @@
   completely replaces the previous value with the new one.
 
   ```jsx
-  const [user, setUser] = useState({ name: "Chethan", age: 22 });
+  const [user, setUser] = useState({ name: "Alex", age: 22 });
 
   // ❌ Wrong — completely replaces the object, age is lost
   setUser({ name: "Ravi" }); // user is now { name: "Ravi" } — age gone!
@@ -218,7 +218,7 @@ React state must be treated as immutable. Always create new values — never mod
   // Update one field at a time:
   function handleNameChange(e) {
     setForm({ ...form, name: e.target.value });
-    // { name: "Chethan", email: "", age: 0 }
+    // { name: "Alex", email: "", age: 0 }
   }
 
   // Or use a single generic handler:
