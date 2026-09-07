@@ -481,7 +481,7 @@ They all:
   const fontSize = userSettings.fontSize ?? 16; // use 16 only if truly absent
   ```
 
-### `?=` — Optional Assignment (Logical Nullish Assignment)
+### `??=` — Optional Assignment (Logical Nullish Assignment)
 
 - **`??=` assigns a value only if the current value is null or undefined** — Useful
   for providing defaults to object properties.
