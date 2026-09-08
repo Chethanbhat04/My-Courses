@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Kata Suite</title>
+</head>
+
+<body>
+    <h1>JS Kata Suite</h1>
+    <div id="app">
+        <h2>Kata 1: Format Profile</h2>
+        <div id="profile-output" style="white-space: pre-line;"></div>
+
+        <h2>Kata 2: Add to Cart</h2>
+        <div id="cart-output" style="white-space: pre-line;"></div>
+
+        <h2>Kata 3: Filter and Sort</h2>
+        <div id="filter-output" style="white-space: pre-line;"></div>
+
+        <h2>Kata 4: Fetch Github User</h2>
+        <div id="github-kata">
+            <input type="text" id="github-input" placeholder="Github Username">
+            <button id="github-button">Fetch User</button>
+            <div id="github-output" style="white-space: pre-line;"></div>
+        </div>
+
+
+        <h2>Kata 5: Safe Get JSON</h2>
+        <div id="safe-output" style="white-space: pre-line;"></div>
+    </div>
+
+    <script>
+        // Kata 1: Format Profile
+        function formatProfile(profile) {
+            const { name = "Anonymous", age = 0, address: { city = "Unknown" } = {} } = profile;
+            return `Name: ${name}, Age: ${age}, City: ${city}`;
+        };
+
+        const user = { name: "Alex", age: 22, address: { city: "Bangalore" } };
+        const result = formatProfile(user);
+        document.getElementById("profile-output").textContent = result;
+
+
+        // Kata 2: Add to Cart
+        function addToCart(cart, newItem) {
+            const newCart = [...cart, newItem];
+            return newCart;
+        }
+
+        const cart = [
+            { name: "Shirt", price: 250 },
+            { name: "bag", price: 350 },
+            { name: 'Pant', price: 300 }
+        ];
+
+        const newItem = { name: 'Shoes', price: 800 };
+        const updatedCart = addToCart(cart, newItem);
+        document.getElementById("cart-output").textContent = "Original: " + JSON.stringify(cart) + "\nUpdated Cart: " + JSON.stringify(updatedCart) + "\n";
+
+
+        // Kata 3: Filter and Sort
+        function filterAndSort(product, maxPrice) {
+            const filtered = product.filter(item => item.price <= maxPrice).sort((a, b) => a.price - b.price);
+            return filtered;
+        }
+
+        const products = [
+            { name: "Laptop", price: 80000 },
+            { name: "Mobile", price: 25000 },
+            { name: "Watch", price: 5000 },
+            { name: "mouse", price: 1000 }
+        ];
+
+        const filteredProducts = filterAndSort(products, 40000);
+        document.getElementById("filter-output").textContent = JSON.stringify(filteredProducts) + "\n";
+
+
+        // Kata 4: Fetch Github User
+        async function fetchUser(username) {
+            try {
+                const res = await fetch(`https://api.github.com/users/${username}`);
+                if (!res.ok) throw new Error(`Http Response Error: ${res.status}`);
+                const data = await res.json();
+                document.getElementById("github-output").textContent =
+                    `name: ${data.name ?? "Not Provided"}, Bio: ${data.bio ?? "No Bio"}, Public Repo's: ${data.public_repos || "No Repo's"}`;
+
+            } catch (err) {
+                document.getElementById("github-output").textContent = `Error: ${err.message}`;
+            }
+        }
+
+        document.getElementById("github-button").addEventListener("click", () => {
+            const username = document.getElementById("github-input").value;
+            fetchUser(username);
+        })
+
+
+        // Kata 5: Safe Get JSON
+        function safeGetJson(jsonString, path) {
+            const keys = path.split(".");
+            let current = jsonString;
+            for (const key of keys) {
+                current = current?.[key];
+            }
+            return current;
+        }
+
+        const nestedObj = { user: { profile: { name: "Alex" } } };
+
+        const validPath = safeGetJson(nestedObj, "user.profile.name");
+        const invalidPath = safeGetJson(nestedObj, "user.details.age");
+
+        document.getElementById("safe-output").textContent = `Valid Path: ${validPath}\nInvalid Path: ${invalidPath ?? "No Data Found"}`;
+
+
+    </script>
+</body>
+
+</html>
