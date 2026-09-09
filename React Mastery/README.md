@@ -1,4 +1,4 @@
-﻿# React Mastery — From JS Essentials to Full-Stack in 12 Weeks
+# React Mastery — From JS Essentials to Full-Stack in 12 Weeks
 
 > A practical, deep-dive course that teaches you the JavaScript you *actually need*,
 > then takes you all the way through React (frontend) and Node/Express/MongoDB (backend)
@@ -62,6 +62,7 @@
 
 ## How to Use This Course
 
+0. **Read the [React App Setup & Commands Guide](React_App_Setup_and_Testing_Guide.md)** to learn how to create Vite apps, run npm commands, and set up your weekly practice projects.
 1. **Start at Week 1** — even if you know some JS, Week 1 covers patterns used *everywhere* in React.
 2. **Type every code example yourself** — copy-pasting does not build muscle memory.
 3. **Do the exercises before looking at solutions** — struggle is where learning happens.
