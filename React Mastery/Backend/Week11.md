@@ -315,7 +315,7 @@ Mongoose adds structure to MongoDB through schemas.
   ```js
   User.find({ age: { $gt: 18, $lte: 65 } });  // age > 18 AND age <= 65
   User.find({ role: { $in: ['admin', 'moderator'] } }); // role is one of these
-  User.find({ name: { $regex: 'chethan', $options: 'i' } }); // case-insensitive search
+  User.find({ name: { $regex: 'alex', $options: 'i' } }); // case-insensitive search
   User.find({ $or: [{ email: query }, { name: query }] }); // OR condition
   ```
 

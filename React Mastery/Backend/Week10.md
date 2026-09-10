@@ -485,7 +485,7 @@ Build a complete REST API for managing a library of books:
 2. **All 5 CRUD endpoints** with proper status codes
 3. **Filtering**: `GET /books?genre=fiction&available=true`
 4. **Pagination**: `GET /books?page=1&limit=10` — response includes `{ data, total, page, totalPages }`
-5. **Search**: `GET /books?search=chethan` — searches in title and author fields
+5. **Search**: `GET /books?search=javascript` — searches in title and author fields
 6. **Validation middleware** — validates required fields on POST/PUT
 7. **Router file** — routes in `routes/books.js`
 8. **Global error handler**

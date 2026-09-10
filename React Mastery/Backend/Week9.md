@@ -155,12 +155,12 @@ These are Node's built-in modules — no npm install needed.
   ```js
   const path = require('path');
 
-  path.join('/users', 'chethan', 'docs');     // '/users/chethan/docs'
+  path.join('/users', 'alex', 'docs');     // '/users/alex/docs'
   path.join(__dirname, 'views', 'index.html'); // absolute path to a file in this dir
 
-  path.basename('/users/chethan/file.txt');    // 'file.txt'
-  path.extname('/users/chethan/file.txt');     // '.txt'
-  path.dirname('/users/chethan/file.txt');     // '/users/chethan'
+  path.basename('/users/alex/file.txt');    // 'file.txt'
+  path.extname('/users/alex/file.txt');     // '.txt'
+  path.dirname('/users/alex/file.txt');     // '/users/alex'
 
   path.resolve('src', 'app.js'); // absolute path: /current/working/dir/src/app.js
   ```

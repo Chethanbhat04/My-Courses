@@ -270,9 +270,9 @@ to child — never the other way around.
     );
   }
 
-  <Avatar name="chethan" />                 // size=48, shape="circle"
-  <Avatar name="chethan" size={96} />       // size=96, shape="circle"
-  <Avatar name="chethan" shape="square" />  // size=48, shape="square"
+  <Avatar name="alex" />                 // size=48, shape="circle"
+  <Avatar name="alex" size={96} />       // size=96, shape="circle"
+  <Avatar name="alex" shape="square" />  // size=48, shape="square"
   ```
 
 ---

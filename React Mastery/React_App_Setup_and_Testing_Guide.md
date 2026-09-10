@@ -62,7 +62,7 @@ Follow these steps to create a new React application for your practice:
 ### Step 1: Open Terminal in your working directory
 Navigate to where you want to store your practice project:
 ```bash
-cd "C:\Chethan\MyFolder\My-Courses\React Mastery"
+cd "C:\path\to\your\course\folder\React Mastery"
 ```
 
 ### Step 2: Run the Vite creation command
