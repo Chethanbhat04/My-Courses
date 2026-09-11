@@ -1,0 +1,16 @@
+.section-container {
+    position: relative;
+    padding-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.section-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    border-radius: 2px;
+}
